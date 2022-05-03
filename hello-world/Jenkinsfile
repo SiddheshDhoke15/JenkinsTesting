@@ -1,1 +1,30 @@
-
+pipeline{
+    agent any
+    stages{
+        stage('Phase 1'){
+            steps{
+                echo 'This is Step 1'
+            }
+        }
+        stage('Phase 2'){
+            steps{
+                echo 'This is Step 2'
+            }
+        }
+        stage('Phase 3'){
+            steps{
+                echo 'This is Step 3'
+            }
+        }
+        stage('Phase 4'){
+            steps{
+                echo 'This is Step 4'
+            }
+        }
+    }
+    post{
+        always{
+            echo 'This will always execute!'
+        }
+    }
+}
